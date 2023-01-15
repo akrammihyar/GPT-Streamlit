@@ -1,4 +1,5 @@
 import streamlit as st
+from model import GeneralModel
 from pandas as pd
 import random
 
