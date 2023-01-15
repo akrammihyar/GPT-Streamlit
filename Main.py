@@ -9,7 +9,7 @@ def app():
 
     api_key = st.sidebar.text_input("APIkey", type="password")
     # Using the streamlit cache
-    @st.cache
+    @st.cache(allow_output_mutation=True)
     def process_prompt(input):
 
         return pred.model_prediction(input=input.strip() , api_key=api_key)
@@ -25,7 +25,7 @@ def app():
         input = st.text_area(
             "Enjoy!",
             value=s_example,
-            max_chars=500,
+            max_chars=250,
             height=50,
         )
 
