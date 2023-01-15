@@ -1,5 +1,6 @@
 import streamlit as st
 from model import GeneralModel
+import datetime
 
 
 def app():
@@ -12,7 +13,7 @@ def app():
     @st.cache(allow_output_mutation=True)
     def process_prompt(input):
 
-        return pred.model_prediction(input=input.strip() , api_key=api_key)
+        return pred.model_prediction(input=input.strip() + ' ' + str(datetime.datetime.now()) , api_key=api_key)
 
     if api_key:
 
