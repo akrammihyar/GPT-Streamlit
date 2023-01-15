@@ -27,8 +27,8 @@ class GeneralModel:
             "max_tokens": 600,
             "best_of": 5,
             "top_p": 0,
-            "frequency_penalty": 0,
-            "presence_penalty": 1,
+            "frequency_penalty": 0.5,
+            "presence_penalty": 0.5,
             "stop": ["###"],
         }
 
