@@ -26,12 +26,18 @@ def app():
             "Enjoy!",
             value=s_example,
             max_chars=500,
-            height=200,
+            height=50,
         )
 
         if st.button("Generate"):
             with st.spinner(text="In progress"):
                 report_text = process_prompt(input)
                 st.markdown(report_text)
+                
+        if st.button("Next Card"):
+            with st.spinner(text="In progress"):
+                report_text = process_prompt(input)
+                st.markdown(report_text)
+                
     else:
         st.error("🔑 Please enter API Key")
