@@ -17,7 +17,7 @@ def app():
     if api_key:
 
         # Setting up the Title
-        st.title("Card Generator Game")
+        st.title("Card Game Generator")
 
         # st.write("---")
 
