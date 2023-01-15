@@ -17,19 +17,19 @@ def app():
     if api_key:
 
         # Setting up the Title
-        st.title("Write a poem based on these words")
+        st.title("Card Generator Game")
 
         # st.write("---")
 
-        s_example = "Birds, flowers, love, sun"
+        s_example = " "
         input = st.text_area(
-            "Use the example below or input your own text in English",
+            "Enjoy!",
             value=s_example,
-            max_chars=150,
-            height=100,
+            max_chars=500,
+            height=200,
         )
 
-        if st.button("Submit"):
+        if st.button("Generate"):
             with st.spinner(text="In progress"):
                 report_text = process_prompt(input)
                 st.markdown(report_text)
