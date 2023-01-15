@@ -25,10 +25,10 @@ class GeneralModel:
             "engine": "text-davinci-003",
             "temperature": 0.9,
             "max_tokens": 600,
-            "best_of": 1,
-            "top_p": 1,
+            "best_of": 5,
+            "top_p": 0,
             "frequency_penalty": 0,
-            "presence_penalty": 0,
+            "presence_penalty": 1,
             "stop": ["###"],
         }
 
