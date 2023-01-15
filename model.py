@@ -1,10 +1,10 @@
 import openai
 
-poem = """Write a poem with the following words: 
+card = """Generate a random question card from conversation card games for couples that will bring you closer together. The title should be : 
 ---
 {input}
 ---
-This is the poem: """
+This is the Card: """
 
 def set_openai_key(key):
     """Sets OpenAI key."""
@@ -22,8 +22,8 @@ class GeneralModel:
 
         # arguments to send the API
         kwargs = {
-            "engine": "text-davinci-002",
-            "temperature": 0.85,
+            "engine": "text-davinci-003",
+            "temperature": 0.9,
             "max_tokens": 600,
             "best_of": 1,
             "top_p": 1,
@@ -48,5 +48,5 @@ class GeneralModel:
         """
         # Setting the OpenAI API key got from the OpenAI dashboard
         set_openai_key(api_key)
-        output = self.query(poem.format(input = input))
+        output = self.query(card.format(input = input))
         return output
